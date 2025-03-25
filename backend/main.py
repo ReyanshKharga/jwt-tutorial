@@ -4,6 +4,7 @@ from uuid import uuid4
 from pydantic import BaseModel
 from typing import Dict
 import time
+import random
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -47,7 +48,8 @@ def get_current_user(request: Request):
 
 @app.get("/protected")
 def protected_route(user: str = Depends(get_current_user)):
-    return {"message": f"Welcome, {user}!"}
+    lucky_number = random.randint(1, 100)
+    return {"message": f"Welcome, {user}! Your lucky number is {lucky_number}"}
 
 @app.post("/logout")
 def logout(request: Request):

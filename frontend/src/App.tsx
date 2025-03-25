@@ -25,7 +25,10 @@ const App: React.FC = () => {
   };
 
   const logout = async () => {
-    await fetch(`${API_URL}/logout`, { method: "POST", credentials: "include" });
+    await fetch(`${API_URL}/logout`, {
+      method: "POST",
+      credentials: "include",
+    });
     setMessage("Logged out");
   };
 

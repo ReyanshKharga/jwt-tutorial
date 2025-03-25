@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from datetime import datetime, timedelta
 import jwt
+import random
 
 # Secret key for JWT (Change this in production)
 SECRET_KEY = "your_secret_key"
@@ -54,7 +55,8 @@ def get_current_user(request: Request):
 
 @app.get("/protected")
 def protected_route(user: str = Depends(get_current_user)):
-    return {"message": f"Welcome, {user}!"}
+    lucky_number = random.randint(1, 100)
+    return {"message": f"Welcome, {user}! Your lucky number is {lucky_number}"}
 
 @app.post("/logout")
 def logout():
