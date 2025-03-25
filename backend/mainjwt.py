@@ -7,7 +7,7 @@ import jwt
 import random
 
 # Secret key for JWT (Change this in production)
-SECRET_KEY = "your_secret_key"
+SECRET_KEY = "myjwtsecret"
 ALGORITHM = "HS256"
 
 app = FastAPI()

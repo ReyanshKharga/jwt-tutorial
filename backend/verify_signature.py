@@ -2,7 +2,7 @@ import base64
 import hmac
 import hashlib
 
-SECRET_KEY = "your_secret_key"
+SECRET_KEY = "myjwtsecret"
 
 def verify_jwt(token: str) -> bool:
     try:
@@ -22,7 +22,7 @@ def verify_jwt(token: str) -> bool:
         return False
 
 # Example JWT Token
-jwt_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0MjgxNjE2M30.q-XNrrRln8wG5bQNsZH52JMlqYsUD0vzwptD1gxtIOw"
+jwt_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0MjkyNzQ3NX0.sYMSMto3Grk2e_U0TUS1S5afEY_BXRNfgLQxesYDufM"
 
 # Verify token
 is_valid = verify_jwt(jwt_token)
