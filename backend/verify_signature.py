@@ -2,7 +2,7 @@ import base64
 import hmac
 import hashlib
 
-SECRET_KEY = "myjwtsecret"
+SECRET_KEY = "myjwtsecret" # DEMO ONLY! Use a strong 256/512-bit secret key in production.
 
 def verify_jwt(token: str) -> bool:
     try:
