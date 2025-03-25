@@ -34,7 +34,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h2>Session-Based Auth (Redis)</h2>
+      <h2 style={{ paddingLeft: "100px" }}>JWT Demo</h2>
       <button onClick={login}>Login</button>
       <button onClick={fetchProtected}>Fetch Protected</button>
       <button onClick={logout}>Logout</button>
