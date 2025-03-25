@@ -48,6 +48,7 @@ def get_current_user(request: Request):
 
 @app.get("/protected")
 def protected_route(user: str = Depends(get_current_user)):
+    # Usually you would do CRUD operations here
     lucky_number = random.randint(1, 100)
     return {"message": f"Welcome, {user}! Your lucky number is {lucky_number}"}
 
