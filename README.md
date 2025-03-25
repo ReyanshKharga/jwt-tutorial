@@ -1,5 +1,7 @@
 # JWT Tutorial
 
+A practical exercise to understand JWT
+
 ## Run Frontend
 
 ```
