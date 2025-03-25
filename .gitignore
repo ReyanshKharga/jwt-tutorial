@@ -24,5 +24,5 @@ dist-ssr
 *.sw?
 
 # Python
-# __pycache__/
+__pycache__/
 venv/
